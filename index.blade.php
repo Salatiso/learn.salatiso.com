@@ -20,7 +20,7 @@
         .swiper-button-next, .swiper-button-prev {
             color: #000;
         }
-        .swiper-button-next::after, .swiper-button-prev::after{
+        .swiper-button-next::after, .swiper-button-prev::after {
             font-size: 2em;
         }
     </style>
@@ -38,35 +38,33 @@
                 <li><a href="{{ route('learning-paths') }}" class="hover:text-blue-300 transition duration-300">Learning Paths</a></li>
                 <li><a href="{{ route('resource-library') }}" class="hover:text-blue-300 transition duration-300">Resources</a></li>
                 <li><a href="{{ route('printables') }}" class="hover:text-blue-300 transition duration-300">Printables</a></li>
-                 <li>
-                    <a href="{{ route('dashboard') }}" class="hover:text-blue-300 transition duration-300">Dashboard</a>
-                </li>
+                <li><a href="{{ route('dashboard') }}" class="hover:text-blue-300 transition duration-300">Dashboard</a></li>
                 <li><a href="{{ route('support') }}" class="hover:text-blue-300 transition duration-300">Support</a></li>
-                 <li><a href="{{ route('contact') }}" class="hover:text-blue-300 transition duration-300">Contact</a></li>
+                <li><a href="{{ route('contact') }}" class="hover:text-blue-300 transition duration-300">Contact</a></li>
             </ul>
         </nav>
         <div class="flex items-center mr-4">
-            <button id="search-button" class="text-white focus:outline-none mr-2">
-                 </button>
-            <button id="chatbot-button" class="text-white focus:outline-none">
-                </button>
+            <button id="search-button" class="text-white focus:outline-none mr-2">Search</button>
+            <button id="chatbot-button" class="text-white focus:outline-none">Chatbot</button>
         </div>
     </header>
 
     <main class="container mx-auto py-8">
+        <!-- About Section -->
         <section id="about" class="mb-12 rounded-md">
             <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center bg-gradient-to-r from-blue-200 to-blue-300 bg-clip-text text-transparent">About Me</h2>
             <p class="text-gray-700 text-lg">
                 Welcome to EduHome. I'm Salatiso Mdeni, and this platform is inspired by my passion for making education and knowledge accessible to everyone.
             </p>
             <p class="text-gray-700 text-lg mt-4">
-               My journey has taken me from rural Transkei, where I often studied under a tree, to formal education and a career, and eventually to becoming a homeschooling father.  My experiences have shown me the importance of accessible, culturally relevant education that empowers individuals.
+                My journey has taken me from rural Transkei, where I often studied under a tree, to formal education and a career, and eventually to becoming a homeschooling father. My experiences have shaped this platform.
             </p>
             <p class="text-gray-700 text-lg mt-4">
-               This website is a resource born from that experience, and from my books, aiming to provide tools and support for homeschooling parents, self-directed learners, and anyone seeking to expand their knowledge.
+                This website is a resource born from that experience, aiming to provide tools and support for homeschooling parents, self-directed learners, and anyone seeking to explore personalized education.
             </p>
         </section>
 
+        <!-- Learning Paths Section -->
         <section id="learning-paths" class="mb-12 rounded-md">
             <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center bg-gradient-to-r from-blue-200 to-blue-300 bg-clip-text text-transparent">Learning Paths</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -87,10 +85,11 @@
             </div>
         </section>
 
+        <!-- Resource Library Section -->
         <section id="resource-library" class="mb-12 rounded-md">
             <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center bg-gradient-to-r from-blue-200 to-blue-300 bg-clip-text text-transparent">Resource Library</h2>
             <p class="text-gray-700 text-lg mb-6">
-                Explore a wealth of educational materials to support your learning journey. Our library includes lesson plans, worksheets, activities, assessments, and multimedia resources, all designed to be easily accessible and adaptable to your needs.
+                Explore a wealth of educational materials to support your learning journey. Our library includes lesson plans, worksheets, activities, assessments, and multimedia resources, all designed to enhance learning.
             </p>
             <div class="swiper resourceLibrarySwiper">
                 <div class="swiper-wrapper">
@@ -103,48 +102,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center">
-                            <i class="fas fa-file-alt text-green-500 text-2xl mr-4"></i>
-                            <div>
-                                <h4 class="text-xl font-semibold text-gray-800">Worksheets</h4>
-                                 <p class="text-gray-600">Printable and digital worksheets for practice and reinforcement.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center">
-                            <i class="fas fa-puzzle-piece text-yellow-500 text-2xl mr-4"></i>
-                            <div>
-                                <h4 class="text-xl font-semibold text-gray-800">Activities</h4>
-                                <p class="text-gray-600">Engaging activities and projects to enhance learning.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center">
-                            <i class="fas fa-file-signature text-red-500 text-2xl mr-4"></i>
-                            <div>
-                                <h4 class="text-xl font-semibold text-gray-800">Assessments</h4>
-                                <p class="text-gray-600">Tools for evaluating student learning and progress.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-white rounded-lg shadow-md p-4 flex items-center">
-                            <i class="fas fa-video text-purple-500 text-2xl mr-4"></i>
-                            <div>
-                                <h4 class="text-xl font-semibold text-gray-800">Multimedia</h4>
-                                <p class="text-gray-600">Videos, audio recordings, and interactive content.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Additional slides can be added similarly -->
                 </div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
         </section>
 
+        <!-- Printable Resources Section -->
         <section id="printables" class="mb-12 rounded-md">
             <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center bg-gradient-to-r from-blue-200 to-blue-300 bg-clip-text text-transparent">Printable Resources</h2>
             <p class="text-gray-700 text-lg mb-6">
@@ -168,6 +133,7 @@
             </div>
         </section>
 
+        <!-- Dashboard Section -->
         <section id="dashboard" class="mb-12 rounded-md">
             <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center bg-gradient-to-r from-blue-200 to-blue-300 bg-clip-text text-transparent">Your Dashboard</h2>
             <p class="text-gray-700 text-lg mb-6">
@@ -177,21 +143,23 @@
                 <p class="text-gray-700 mb-4">
                     If you are a registered user, please log in to access the dashboard.
                 </p>
-                 <a href="{{ route('login') }}" class="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-md transition duration-300 text-center inline-block">Login</a>
-                 <p class="mt-4 text-gray-700">
-                    New user?  Please register.
+                <a href="{{ route('login') }}" class="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-md transition duration-300 text-center inline-block">Login</a>
+                <p class="mt-4 text-gray-700">
+                    New user? Please register.
                 </p>
                 <a href="{{ route('register') }}" class="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 px-6 rounded-md transition duration-300 text-center inline-block mt-2">Register</a>
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="mb-12 rounded-md">
             <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center bg-gradient-to-r from-blue-200 to-blue-300 bg-clip-text text-transparent">Contact Us</h2>
             <p class="text-gray-700 text-lg mb-6 text-center">
                 Contact us for suggestions, comments, opportunities to support, and to learn about book voucher promos.
             </p>
-             <div class="bg-white rounded-lg shadow-md p-6 max-w-md mx-auto">
+            <div class="bg-white rounded-lg shadow-md p-6 max-w-md mx-auto">
                 <form action="{{ route('contact.send') }}" method="POST" class="space-y-4">
+                    @csrf
                     <div>
                         <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
                         <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name" required>
@@ -210,7 +178,7 @@
                     </div>
                     <div class="flex items-center">
                         <input type="checkbox" id="popi" name="popi" required class="mr-2">
-                        <label for="popi" class="text-gray-700 text-sm">I consent to the processing of my personal information as per the  <a href="{{ route('privacy-policy') }}" class="text-blue-500 hover:text-blue-700 underline">Privacy Policy</a></label>
+                        <label for="popi" class="text-gray-700 text-sm">I consent to the processing of my personal information as per the <a href="{{ route('privacy-policy') }}" class="text-blue-500 hover:underline">Privacy Policy</a>.</label>
                     </div>
                     <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Send Message</button>
                 </form>
@@ -218,8 +186,8 @@
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white py-4 text-center rounded-md absolute bottom-0 w-full">
-        <p>© 2025 EduHome. All rights reserved.  <a href="{{ route('privacy-policy') }}" class="text-blue-300 hover:underline">Privacy Policy</a> | <a href="{{ route('terms-of-service') }}" class="text-blue-300 hover:underline">Terms of Service</a></p>
+    <footer class="bg-gray-800 text-white py-4 text-center rounded-md">
+        <p>© 2025 EduHome. All rights reserved. <a href="{{ route('privacy-policy') }}" class="text-blue-300 hover:underline">Privacy Policy</a> | <a href="{{ route('terms-of-service') }}" class="text-blue-300 hover:underline">Terms of Service</a></p>
     </footer>
 </body>
 </html>
