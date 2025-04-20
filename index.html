@@ -45,6 +45,7 @@
             </ul>
         </nav>
     </header>
+
     <main class="container mx-auto py-8">
         <section id="about" class="mb-12 rounded-md">
             <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center bg-gradient-to-r from-blue-200 to-blue-300 bg-clip-text text-transparent">About Our Platform</h2>
@@ -58,6 +59,7 @@
                 We are committed to making education accessible to all, regardless of location or socioeconomic status. That's why we offer a wealth of free printable resources, allowing parents in even the most rural areas to provide quality learning experiences for their children.
             </p>
         </section>
+
         <section id="learning-paths" class="mb-12 rounded-md">
             <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center bg-gradient-to-r from-blue-200 to-blue-300 bg-clip-text text-transparent">Learning Paths</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -66,17 +68,18 @@
                     <p class="text-gray-700 text-lg mb-4">
                         Structured, curriculum-based learning aligned with the South African CAPS curriculum and other recognized programs. Ideal for users seeking a traditional, guided educational experience.
                     </p>
-                    <a href="#online-learning" class="bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-semibold py-3 px-6 rounded-md transition duration-300 text-center">Explore Online Learning</a>
+                    <a href="{{ route('online-learning') }}" class="bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-semibold py-3 px-6 rounded-md transition duration-300 text-center">Explore Online Learning</a>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
                     <h3 class="text-2xl font-semibold text-blue-600 mb-4">Homeschooling/Self-Driven Learning</h3>
                     <p class="text-gray-700 text-lg mb-4">
                         Flexible, personalized approach to education, tailored to individual interests and learning pace. Ideal for users seeking greater autonomy and a customizable educational journey.
                     </p>
-                    <a href="#homeschooling-learning" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-md transition duration-300 text-center">Explore Self-Driven Learning</a>
+                    <a href="{{ route('self-driven-learning') }}" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-md transition duration-300 text-center">Explore Self-Driven Learning</a>
                 </div>
             </div>
         </section>
+
         <section id="resource-library" class="mb-12 rounded-md">
             <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center bg-gradient-to-r from-blue-200 to-blue-300 bg-clip-text text-transparent">Resource Library</h2>
             <p class="text-gray-700 text-lg mb-6">
@@ -134,19 +137,22 @@
                 <div class="swiper-button-next"></div>
             </div>
         </section>
+
         <section id="printables" class="mb-12 rounded-md">
             <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center bg-gradient-to-r from-blue-200 to-blue-300 bg-clip-text text-transparent">Printable Resources</h2>
             <p class="text-gray-700 text-lg mb-6">
-                Access a wide range of free, printable learning materials for various grades and subjects. No login required.
+                Access a wide range of free, printable learning materials for various grades. No login required.
             </p>
             <div class="swiper printableSwiper">
                 <div class="swiper-wrapper">
                     @for ($grade = 0; $grade <= 12; $grade++)
                         <div class="swiper-slide">
-                            <div class="bg-white rounded-lg shadow-md p-4 text-center">
-                                <h4 class="text-xl font-semibold text-gray-800">Grade {{ $grade }}</h4>
-                                <p class="text-gray-600">Printable resources for Grade {{ $grade }} learners.</p>
-                            </div>
+                            <a href="{{ route('printables.grade', ['grade' => $grade]) }}">
+                                <div class="bg-white rounded-lg shadow-md p-4 text-center cursor-pointer hover:shadow-lg transition duration-300">
+                                    <h4 class="text-xl font-semibold text-gray-800">Grade {{ $grade }}</h4>
+                                    <p class="text-gray-600">Printable resources for Grade {{ $grade }} learners.</p>
+                                </div>
+                            </a>
                         </div>
                     @endfor
                 </div>
@@ -164,11 +170,11 @@
                 <p class="text-gray-700 mb-4">
                     If you are a registered user, please log in to access the dashboard.
                 </p>
-                 <a href="#login" class="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-md transition duration-300 text-center inline-block">Login</a>
+                 <a href="{{ route('login') }}" class="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-md transition duration-300 text-center inline-block">Login</a>
                  <p class="mt-4 text-gray-700">
                     New user?  Please register.
                 </p>
-                <a href="#register" class="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 px-6 rounded-md transition duration-300 text-center inline-block mt-2">Register</a>
+                <a href="{{ route('register') }}" class="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 px-6 rounded-md transition duration-300 text-center inline-block mt-2">Register</a>
             </div>
         </section>
 
@@ -191,11 +197,21 @@
     </main>
 
     <footer class="bg-gray-800 text-white py-4 text-center rounded-md">
-        <p>© 2025 EduHome. All rights reserved.  <a href="/privacy-policy" class="text-blue-300 hover:underline">Privacy Policy</a> | <a href="/terms-of-service" class="text-blue-300 hover:underline">Terms of Service</a></p>
+        <p>© 2025 EduHome. All rights reserved.  <a href="{{ route('privacy-policy') }}" class="text-blue-300 hover:underline">Privacy Policy</a> | <a href="{{ route('terms-of-service') }}" class="text-blue-300 hover:underline">Terms of Service</a></p>
     </footer>
-
     <script>
-       var resourceLibrarySwiper = new Swiper(".resourceLibrarySwiper", {
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Initialize Swiper for Resource Library
+        var resourceLibrarySwiper = new Swiper(".resourceLibrarySwiper", {
             slidesPerView: 3,
             spaceBetween: 30,
             loop: true,
@@ -207,8 +223,20 @@
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
         });
 
+        // Initialize Swiper for Printable Resources
         var printableSwiper = new Swiper(".printableSwiper", {
             slidesPerView: 4,
             spaceBetween: 30,
@@ -220,6 +248,20 @@
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
+            },
+             breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                640: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 4,
+                },
             },
         });
     </script>
