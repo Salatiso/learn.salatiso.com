@@ -77,7 +77,7 @@
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white py-4 text-center rounded-md">
+    <footer class="bg-gray-800 text-white py-4 text-center rounded-md absolute bottom-0 w-full">
         <p>© 2025 EduHome. All rights reserved.  <a href="{{ route('privacy-policy') }}" class="text-blue-300 hover:underline">Privacy Policy</a> | <a href="{{ route('terms-of-service') }}" class="text-blue-300 hover:underline">Terms of Service</a></p>
     </footer>
 
@@ -92,7 +92,7 @@
             });
         });
 
-        // Initialize Swiper forResource Library
+        // Initialize Swiper for Resource Library
         var resourceLibrarySwiper = new Swiper(".resourceLibrarySwiper", {
             slidesPerView: 3,
             spaceBetween: 30,
