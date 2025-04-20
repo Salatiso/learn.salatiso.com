@@ -1,0 +1,476 @@
+**online-learning.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning - EduHome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-500 text-white py-4 flex justify-between items-center shadow-md sticky top-0 z-10 rounded-md">
+        <div class="logo text-xl font-bold ml-4">
+            <a href="/" class="hover:text-blue-300 transition duration-300">
+                <span class="text-yellow-400">Edu</span>Home
+            </a>
+        </div>
+        <nav class="mr-4">
+            <ul class="flex space-x-4">
+                 <li><a href="#about" class="hover:text-blue-300 transition duration-300">About</a></li>
+                <li><a href="#learning-paths" class="hover:text-blue-300 transition duration-300">Learning Paths</a></li>
+                <li><a href="#resource-library" class="hover:text-blue-300 transition duration-300">Resources</a></li>
+                <li><a href="#printables" class="hover:text-blue-300 transition duration-300">Printables</a></li>
+                 <li>
+                    <a href="#dashboard" class="hover:text-blue-300 transition duration-300">Dashboard</a>
+                </li>
+                <li><a href="#support" class="hover:text-blue-300 transition duration-300">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-8">
+        <section class="mb-12 rounded-md">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center bg-gradient-to-r from-blue-200 to-blue-300 bg-clip-text text-transparent">Online Learning</h2>
+            <p class="text-gray-700 text-lg mb-6">
+                Explore structured, curriculum-based learning aligned with the South African CAPS curriculum and other recognized programs.
+            </p>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-blue-700 mb-4">Curricula</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h4 class="text-xl font-semibold text-gray-800">CAPS (South Africa)</h4>
+                        <p class="text-gray-600">South African Curriculum and Assessment Policy Statement.</p>
+                         <a href="#" class="mt-4 inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-semibold py-2 px-4 rounded-md transition duration-300">View CAPS Curriculum</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h4 class="text-xl font-semibold text-gray-800">Curriculum 2</h4>
+                        <p class="text-gray-600">Description of Curriculum 2.</p>
+                         <a href="#" class="mt-4 inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-semibold py-2 px-4 rounded-md transition duration-300">View Curriculum 2</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h4 class="text-xl font-semibold text-gray-800">Curriculum 3</h4>
+                        <p class="text-gray-600">Description of Curriculum 3.</p>
+                        <a href="#" class="mt-4 inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-800 font-semibold py-2 px-4 rounded-md transition duration-300">View Curriculum 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-semibold text-blue-700 mb-4">Grades</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    @for ($grade = 0; $grade <= 12; $grade++)
+                        <div class="bg-white rounded-lg shadow-md p-3 text-center">
+                            <h4 class="text-lg font-semibold text-gray-800">Grade {{ $grade }}</h4>
+                            <a href="#" class="mt-2 inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md transition duration-300">View Grade {{ $grade }}</a>
+                        </div>
+                    @endfor
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4 text-center rounded-md">
+        <p>© 2025 EduHome. All rights reserved.  <a href="/privacy-policy" class="text-blue-300 hover:underline">Privacy Policy</a> | <a href="/terms-of-service" class="text-blue-300 hover:underline">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
+```
+
+**self-driven-learning.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Driven Learning - EduHome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-500 text-white py-4 flex justify-between items-center shadow-md sticky top-0 z-10 rounded-md">
+        <div class="logo text-xl font-bold ml-4">
+            <a href="/" class="hover:text-blue-300 transition duration-300">
+                <span class="text-yellow-400">Edu</span>Home
+            </a>
+        </div>
+        <nav class="mr-4">
+            <ul class="flex space-x-4">
+                 <li><a href="#about" class="hover:text-blue-300 transition duration-300">About</a></li>
+                <li><a href="#learning-paths" class="hover:text-blue-300 transition duration-300">Learning Paths</a></li>
+                <li><a href="#resource-library" class="hover:text-blue-300 transition duration-300">Resources</a></li>
+                <li><a href="#printables" class="hover:text-blue-300 transition duration-300">Printables</a></li>
+                 <li>
+                    <a href="#dashboard" class="hover:text-blue-300 transition duration-300">Dashboard</a>
+                </li>
+                <li><a href="#support" class="hover:text-blue-300 transition duration-300">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-8">
+        <section class="mb-12 rounded-md">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center bg-gradient-to-r from-blue-200 to-blue-300 bg-clip-text text-transparent">Self-Driven Learning</h2>
+            <p class="text-gray-700 text-lg mb-6">
+                Explore a flexible, personalized approach to education, tailored to your interests and learning pace.
+            </p>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-blue-700 mb-4">Subjects</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h4 class="text-xl font-semibold text-gray-800">Mathematics</h4>
+                        <p class="text-gray-600">Explore mathematical concepts and problem-solving.</p>
+                         <a href="#" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md transition duration-300">Start Learning Mathematics</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h4 class="text-xl font-semibold text-gray-800">Language Arts</h4>
+                        <p class="text-gray-600">Develop reading, writing, and communication skills.</p>
+                        <a href="#" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md transition duration-300">Start Learning Language Arts</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h4 class="text-xl font-semibold text-gray-800">Science</h4>
+                        <p class="text-gray-600">Discover the principles of biology, chemistry, and physics.</p>
+                         <a href="#" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md transition duration-300">Start Learning Science</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-semibold text-blue-700 mb-4">Practical Skills</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h4 class="text-xl font-semibold text-gray-800">Subsistence Farming</h4>
+                        <p class="text-gray-600">Learn the basics of growing your own food.</p>
+                        <a href="#" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md transition duration-300">Start Learning Farming</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h4 class="text-xl font-semibold text-gray-800">Plumbing</h4>
+                        <p class="text-gray-600">Understand basic plumbing principles and techniques.</p>
+                        <a href="#" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md transition duration-300">Start Learning Plumbing</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h4 class="text-xl font-semibold text-gray-800">Basic Electricity</h4>
+                        <p class="text-gray-600">Learn the fundamentals of electrical systems.</p>
+                        <a href="#" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md transition duration-300">Start Learning Electricity</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4 text-center rounded-md">
+        <p>© 2025 EduHome. All rights reserved.  <a href="/privacy-policy" class="text-blue-300 hover:underline">Privacy Policy</a> | <a href="/terms-of-service" class="text-blue-300 hover:underline">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
+```
+
+**printable-resources.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printable Resources - EduHome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-500 text-white py-4 flex justify-between items-center shadow-md sticky top-0 z-10 rounded-md">
+        <div class="logo text-xl font-bold ml-4">
+            <a href="/" class="hover:text-blue-300 transition duration-300">
+                <span class="text-yellow-400">Edu</span>Home
+            </a>
+        </div>
+        <nav class="mr-4">
+            <ul class="flex space-x-4">
+                 <li><a href="#about" class="hover:text-blue-300 transition duration-300">About</a></li>
+                <li><a href="#learning-paths" class="hover:text-blue-300 transition duration-300">Learning Paths</a></li>
+                <li><a href="#resource-library" class="hover:text-blue-300 transition duration-300">Resources</a></li>
+                <li><a href="#printables" class="hover:text-blue-300 transition duration-300">Printables</a></li>
+                 <li>
+                    <a href="#dashboard" class="hover:text-blue-300 transition duration-300">Dashboard</a>
+                </li>
+                <li><a href="#support" class="hover:text-blue-300 transition duration-300">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-8">
+        <section class="mb-12 rounded-md">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center bg-gradient-to-r from-blue-200 to-blue-300 bg-clip-text text-transparent">Printable Resources</h2>
+            <p class="text-gray-700 text-lg mb-6">
+                Access a wide range of free, printable learning materials for various grades and subjects.  No login required.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                @for ($grade = 0; $grade <= 12; $grade++)
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h4 class="text-xl font-semibold text-gray-800">Grade {{ $grade }}</h4>
+                        <p class="text-gray-600">Printable resources for Grade {{ $grade }} learners.</p>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="#" class="block hover:text-blue-600 transition duration-300">Mathematics</a></li>
+                            <li><a href="#" class="block hover:text-blue-600 transition duration-300">Language Arts</a></li>
+                            <li><a href="#" class="block hover:text-blue-600 transition duration-300">Science</a></li>
+                            <li><a href="#" class="block hover:text-blue-600 transition duration-300">Social Studies</a></li>
+                            </ul>
+                         <a href="#" class="mt-4 inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md transition duration-300">Download All Grade {{ $grade }} Resources</a>
+                    </div>
+                @endfor
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4 text-center rounded-md">
+        <p>© 2025 EduHome. All rights reserved.  <a href="/privacy-policy" class="text-blue-300 hover:underline">Privacy Policy</a> | <a href="/terms-of-service" class="text-blue-300 hover:underline">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
+```
+
+**dashboard.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - EduHome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-500 text-white py-4 flex justify-between items-center shadow-md sticky top-0 z-10 rounded-md">
+        <div class="logo text-xl font-bold ml-4">
+            <a href="/" class="hover:text-blue-300 transition duration-300">
+                <span class="text-yellow-400">Edu</span>Home
+            </a>
+        </div>
+        <nav class="mr-4">
+            <ul class="flex space-x-4">
+                 <li><a href="#about" class="hover:text-blue-300 transition duration-300">About</a></li>
+                <li><a href="#learning-paths" class="hover:text-blue-300 transition duration-300">Learning Paths</a></li>
+                <li><a href="#resource-library" class="hover:text-blue-300 transition duration-300">Resources</a></li>
+                <li><a href="#printables" class="hover:text-blue-300 transition duration-300">Printables</a></li>
+                 <li>
+                    <a href="#dashboard" class="hover:text-blue-300 transition duration-300">Dashboard</a>
+                </li>
+                <li><a href="#support" class="hover:text-blue-300 transition duration-300">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-8">
+        <section class="mb-12 rounded-md">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center bg-gradient-to-r from-blue-200 to-blue-300 bg-clip-text text-transparent">Your Dashboard</h2>
+            <p class="text-gray-700 text-lg mb-6">
+                Welcome to your personalized learning dashboard.  Here you can track your progress, view your courses/subjects, access assessments, and manage your account settings.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Your Profile</h3>
+                    <div class="mb-4">
+                        <p class="text-gray-700"><span class="font-semibold">Name:</span> [User Name]</p>
+                        <p class="text-gray-700"><span class="font-semibold">Email:</span> [User Email]</p>
+                        <p class="text-gray-700"><span class="font-semibold">Account Type:</span> [Parent/Learner]</p>
+                    </div>
+                     <a href="#" class="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-md transition duration-300 inline-block">Edit Profile</a>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Your Progress</h3>
+                    <p class="text-gray-700 mb-4">
+                        Track your progress in your enrolled courses and subjects.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><span class="font-semibold">Mathematics:</span> 80% Complete</li>
+                        <li><span class="font-semibold">Language Arts:</span> 60% Complete</li>
+                        <li><span class="font-semibold">Science:</span> 40% Complete</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Courses/Subjects</h3>
+                     <p class="text-gray-700 mb-4">
+                        View your enrolled courses and subjects.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Mathematics</li>
+                        <li>Language Arts</li>
+                        <li>Science</li>
+                         <li>Social Studies</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Assessments</h3>
+                     <p class="text-gray-700 mb-4">
+                        Access your assessments and view your results.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Mathematics Quiz 1: 90%</li>
+                        <li>Language Arts Assignment 1: 75%</li>
+                        <li>Science Exam 1: 85%</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Account Settings</h3>
+                    <p class="text-gray-700 mb-4">
+                        Manage your account settings.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><a href="#" class="hover:text-blue-600 transition duration-300">Change Password</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition duration-300">Update Profile</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition duration-300">Notification Preferences</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4 text-center rounded-md">
+        <p>© 2025 EduHome. All rights reserved.  <a href="/privacy-policy" class="text-blue-300 hover:underline">Privacy Policy</a> | <a href="/terms-of-service" class="text-blue-300 hover:underline">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
+```
+
+**support.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - EduHome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-500 text-white py-4 flex justify-between items-center shadow-md sticky top-0 z-10 rounded-md">
+        <div class="logo text-xl font-bold ml-4">
+            <a href="/" class="hover:text-blue-300 transition duration-300">
+                <span class="text-yellow-400">Edu</span>Home
+            </a>
+        </div>
+        <nav class="mr-4">
+            <ul class="flex space-x-4">
+                 <li><a href="#about" class="hover:text-blue-300 transition duration-300">About</a></li>
+                <li><a href="#learning-paths" class="hover:text-blue-300 transition duration-300">Learning Paths</a></li>
+                <li><a href="#resource-library" class="hover:text-blue-300 transition duration-300">Resources</a></li>
+                <li><a href="#printables" class="hover:text-blue-300 transition duration-300">Printables</a></li>
+                 <li>
+                    <a href="#dashboard" class="hover:text-blue-300 transition duration-300">Dashboard</a>
+                </li>
+                <li><a href="#support" class="hover:text-blue-300 transition duration-300">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-8">
+        <section class="mb-12 rounded-md">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center bg-gradient-to-r from-blue-200 to-blue-300 bg-clip-text text-transparent">Support &amp; FAQs</h2>
+            <p class="text-gray-700 text-lg mb-6">
+                Find answers to common questions and access support resources.  We're here to help you succeed on your learning journey.
+            </p>
+
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h3 class="text-2xl font-semibold text-blue-600 mb-4">Frequently Asked Questions</h3>
+                <div class="space-y-4">
+                    <div class="border-b border-gray-200 pb-4">
+                        <h4 class="text-lg font-semibold text-gray-800">How do I register for an account?</h4>
+                        <p class="text-gray-700">
+                            To register for an account, click on the "Register" link in the header or on the dashboard page and follow the instructions.
+                        </p>
+                    </div>
+                    <div class="border-b border-gray-200 pb-4">
+                        <h4 class="text-lg font-semibold text-gray-800">How do I download printable resources?</h4>
+                        <p class="text-gray-700">
+                           To download printable resources, go to the "Printable Resources" section and select the grade and subject you need.  The resources are free and do not require a login.
+                        </p>
+                    </div>
+                    <div class="border-b border-gray-200 pb-4">
+                        <h4 class="text-lg font-semibold text-gray-800">How do I track my child's progress?</h4>
+                        <p class="text-gray-700">
+                           You can track your child's progress by logging in to your account and accessing the "Dashboard" section.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800">What subjects are available?</h4>
+                        <p class="text-gray-700">
+                           We offer a variety of subjects, including Mathematics, Language Arts, Science, Social Studies, and practical skills like Subsistence Farming, Plumbing, and Basic Electricity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-2xl font-semibold text-blue-600 mb-4">Contact Support</h3>
+                <p class="text-gray-700 mb-4">
+                    If you have any other questions or need assistance, please contact us.
+                </p>
+                <p class="text-gray-700">
+                    Email: <a href="mailto:support@eduhome.com" class="text-blue-500 hover:underline">support@eduhome.com</a>
+                </p>
+                <p class="text-gray-700">
+                    Phone: +27 [Your Phone Number]
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4 text-center rounded-md">
+        <p>© 2025 EduHome. All rights reserved.  <a href="/privacy-policy" class="text-blue-300 hover:underline">Privacy Policy</a> | <a href="/terms-of-service" class="text-blue-300 hover:underline">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
+```
